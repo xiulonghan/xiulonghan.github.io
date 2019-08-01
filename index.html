@@ -62,10 +62,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-phone-attribute" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/07/31/test/" class="article-date">
-  <time datetime="2019-07-31T10:43:54.000Z" itemprop="datePublished">2019-07-31</time>
+    <a href="/2019/08/01/phone-attribute/" class="article-date">
+  <time datetime="2019-08-01T03:16:43.000Z" itemprop="datePublished">2019-08-01</time>
 </a>
     
   </div>
@@ -76,7 +76,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/31/test/">python解析号码归属地</a>
+      <a class="article-title" href="/2019/08/01/phone-attribute/">python解析号码归属地</a>
     </h1>
   
 
@@ -87,19 +87,22 @@
         <p>​        在实际生产环境中，特别是进行运营商数据的处理时，会解析某个号码的归属地、运营商等。本文基于百度的开源接口实现号码归属地解析。代码如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入需求的包</span></span><br><span class="line"><span class="keyword">import</span> demjson</span><br><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"></span><br><span class="line"><span class="comment">#定义号码解析函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_number_attribution</span><span class="params">(_number)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    Returns the attribution information of the input number。</span></span><br><span class="line"><span class="string">    :param _number:</span></span><br><span class="line"><span class="string">    :return: _number,province,city,operator</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        url = <span class="string">'http://mobsec-dianhua.baidu.com/dianhua_api/open/location?tel='</span>+str(_number)</span><br><span class="line">        req = urllib.request.Request(url)</span><br><span class="line">        resp = urllib.request.urlopen(req)</span><br><span class="line">        content = resp.read()</span><br><span class="line">        resp = demjson.decode(content)</span><br><span class="line">        number_detail = resp[<span class="string">'response'</span>][_number][<span class="string">'detail'</span>]</span><br><span class="line">        city = number_detail[<span class="string">'area'</span>][<span class="number">0</span>][<span class="string">'city'</span>]</span><br><span class="line">        province = number_detail[<span class="string">'province'</span>]</span><br><span class="line">        operator = number_detail[<span class="string">'operator'</span>]</span><br><span class="line">        print(<span class="string">"号码：&#123;0&#125;，省份：&#123;1&#125;，城市：&#123;2&#125;，运营商：&#123;3&#125;"</span>.format(_number, province, city, operator))</span><br><span class="line">    <span class="keyword">except</span> ValueError:</span><br><span class="line">        print(ValueError)</span><br><span class="line">        </span><br><span class="line"><span class="comment">#主函数入口</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="comment">#测试号码</span></span><br><span class="line">    number = <span class="string">'phone_number'</span></span><br><span class="line">    get_number_attribution(_number=number)</span><br></pre></td></tr></table></figure>
 
-<p>结果示例：</p>
+<p><strong>示例：</strong></p>
 <blockquote>
-<p> 输入：18244226985<br> 输出：号码：18244226985，省份：四川，城市：成都，运营商：移动<br> 输入：17001111234<br> 输出：号码：17001111234，省份：北京，城市：北京，运营商：苏宁互联<br> 输入：19926782222<br> 输出：号码：19926782222，省份：广东，城市：揭阳，运营商：电信<br> <strong>注</strong>：其中对于虚拟运营商号段，该接口输出的不是电信、移动、联通，而是具体的代理商。</p>
+<p>输入：18244226985</p>
+<p>输出：号码：18244226985，省份：四川，城市：成都，运营商：移动</p>
+<p>输入：17001111234</p>
+<p>输出：号码：17001111234，省份：北京，城市：北京，运营商：苏宁互联</p>
+<p>输入：19926782222</p>
+<p>输出：号码：19926782222，省份：广东，城市：揭阳，运营商：电信</p>
+<p><strong>注：</strong> 其中对于虚拟运营商号段，该接口输出的不是电信、移动、联通，而是具体的代理商。</p>
 </blockquote>
-<p>每日一句：</p>
-<blockquote>
-<p><code>The great pleasure in life is doing what people say you cannot do.</code></p>
-</blockquote>
+<h2 id="每日一句"><a href="#每日一句" class="headerlink" title="每日一句"></a>每日一句</h2><p><code>The great pleasure in life is doing what people say you cannot do.</code></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/31/test/" data-id="cjys2xnux000090vmviqc8e90" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/01/phone-attribute/" data-id="cjys47y4200002kvmoy4p3jvi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -127,7 +130,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li></ul>
     </div>
   </div>
 
@@ -140,7 +143,7 @@
       <ul>
         
           <li>
-            <a href="/2019/07/31/test/">python解析号码归属地</a>
+            <a href="/2019/08/01/phone-attribute/">python解析号码归属地</a>
           </li>
         
       </ul>
