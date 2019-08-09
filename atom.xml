@@ -5,9 +5,9 @@
   <subtitle>调参工程师，马列主义信奉者，社会主义实践者，共产主义接班人</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://xiulonghan.github.io/"/>
   <updated>2019-08-09T07:52:42.955Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://xiulonghan.github.io/</id>
   
   <author>
     <name>aluka</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>keras框架中融合层Merge各类函数的使用</title>
-    <link href="http://yoursite.com/2019/08/09/keras-merge/"/>
-    <id>http://yoursite.com/2019/08/09/keras-merge/</id>
+    <link href="https://xiulonghan.github.io/2019/08/09/keras-merge/"/>
+    <id>https://xiulonghan.github.io/2019/08/09/keras-merge/</id>
     <published>2019-08-09T07:34:37.000Z</published>
     <updated>2019-08-09T07:52:42.955Z</updated>
     
@@ -31,21 +31,21 @@
     
     </summary>
     
-      <category term="Deep Learning" scheme="http://yoursite.com/categories/Deep-Learning/"/>
+      <category term="Deep Learning" scheme="https://xiulonghan.github.io/categories/Deep-Learning/"/>
     
     
-      <category term="keras" scheme="http://yoursite.com/tags/keras/"/>
+      <category term="keras" scheme="https://xiulonghan.github.io/tags/keras/"/>
     
-      <category term="merge" scheme="http://yoursite.com/tags/merge/"/>
+      <category term="merge" scheme="https://xiulonghan.github.io/tags/merge/"/>
     
-      <category term="深度学习" scheme="http://yoursite.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+      <category term="深度学习" scheme="https://xiulonghan.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>python解析号码归属地</title>
-    <link href="http://yoursite.com/2019/08/01/phone-attribute/"/>
-    <id>http://yoursite.com/2019/08/01/phone-attribute/</id>
+    <link href="https://xiulonghan.github.io/2019/08/01/phone-attribute/"/>
+    <id>https://xiulonghan.github.io/2019/08/01/phone-attribute/</id>
     <published>2019-08-01T03:16:43.000Z</published>
     <updated>2019-08-01T08:14:49.369Z</updated>
     
@@ -57,12 +57,12 @@
     
     </summary>
     
-      <category term="Data Analysis" scheme="http://yoursite.com/categories/Data-Analysis/"/>
+      <category term="Data Analysis" scheme="https://xiulonghan.github.io/categories/Data-Analysis/"/>
     
     
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+      <category term="python" scheme="https://xiulonghan.github.io/tags/python/"/>
     
-      <category term="号码归属地" scheme="http://yoursite.com/tags/%E5%8F%B7%E7%A0%81%E5%BD%92%E5%B1%9E%E5%9C%B0/"/>
+      <category term="号码归属地" scheme="https://xiulonghan.github.io/tags/%E5%8F%B7%E7%A0%81%E5%BD%92%E5%B1%9E%E5%9C%B0/"/>
     
   </entry>
   
