@@ -50,7 +50,7 @@
     <link href="https://xiulonghan.github.io/2019/08/16/wandb-keras/"/>
     <id>https://xiulonghan.github.io/2019/08/16/wandb-keras/</id>
     <published>2019-08-16T09:33:29.000Z</published>
-    <updated>2019-08-27T06:02:29.701Z</updated>
+    <updated>2019-09-02T10:34:09.625Z</updated>
     
     <content type="html"><![CDATA[<p>​        在训练神经网络的过程中，可视化模型的最终结构和中间训练过程是很重要的，这些都可以用写很长的可视化代码实现，但是为了偷懒，可以选择使用<a href="https://www.wandb.com/" target="_blank" rel="noopener">wandb</a>，安装软件包，写几行代码，就可以在网页端显示各种指标及网络结构。<a id="more"></a></p><p>1、安装wandb</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install --upgrade wandb</span><br></pre></td></tr></table></figure><p>目前wandb支持<strong>Keras</strong>，<strong>PyTorch</strong>，<strong>Tensorflow</strong></p>]]></content>
     
